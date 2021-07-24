@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;">
+
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--<meta http-equiv="refresh" content="10s">
+	<title>resume in web</title>-->
+
+	<link rel="stylesheet" href="resumewebsite/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+	<!--<link rel="stylesheet" type="text/css" href="resumewebsite.css">-->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.container{
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	min-height: 1000px;
+	background: #fff;
+	margin-right: 50px;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	box-shadow: 0 35px 55px rgba(0 ,0 ,0, 0.3);
+
+}
+.container .left-side{
+	position: relative;
+	background: #003147;
+	padding: 40px;
+}
+.profiletext{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(255, 255, 255,0.2);
+}
+.profiletext .imgbox{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color:white;
+	overflow: hidden;
+}
+.profiletext .imgbox img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+.profiletext h2{
+	color: white;
+	font-size: 1.5em;
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-align:center;
+	font-weight: 600;
+	line-height: 1.4em;
+}
+.profiletext h2 span{
+	font-size: 0.8em;
+	font-weight:300;
+	color: orange;
+	font-family: sans-serif;
+}
+.contactinfo{
+	padding-top: 40px;	
+}
+.title{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+.contactinfo ul{
+	position: relative;
+
+}
+.contactinfo ul li{
+	position: relative;
+	list-style: none;
+	margin: 10px 0;
+	cursor: pointer;
+	color: orange;
+}
+.contactinfo ul li .icon{
+	display: inline-block;
+	width: 30px;
+	font-size: 18px;
+	color: #03a9f4;
+}
+.contactinfo ul li span{
+	color: orange;
+	font-weight: 300;
+}
+.contactinfo .education li{
+	margin-bottom: 15px;
+}
+.contactinfo .education h5{
+	color: #03a9f4;
+	font-weight: 500;
+}
+.contactinfo .education h4:nth-child(2)
+{
+	color: #fff;
+	font-weight: 500;
+
+}
+.contactinfo .education h4{
+	font-weight: 300;
+	color: white;
+	
+}
+.contactinfo .language .percent{
+	position: relative;
+	width: 100%;
+	height: 6px;
+	background: #081921;
+	display: block;
+	margin-top: 5px;
+}
+.contactinfo .language .percent div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #fff;
+}
+.brd{
+	color:#fff; 
+	border: 1px solid white;
+	border-width: 2px;
+	background-color: #000000;
+	border-radius: 5px;
+	text-align: center;
+
+}
+.container .right-side{
+	position: relative;
+	background: #fff;
+	padding: 40px;
+}
+.about{
+	margin-bottom: 50px;
+}
+.about:last-child{
+	margin-bottom: 0;
+}
+.title2{
+	color: #003147;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+p{
+	color: #212327;
+}
+.about .box p{
+	color:black;
+
+}
+.skills .box{
+	position: relative;
+	line-height: 34px;
+	width: 100%;
+	display:grid;
+	grid-template-columns: 150px 1fr;
+	justify-content: center;
+	align-items: center;
+}
+.skills .box h4{
+	text-transform: uppercase;
+	color: #212327;
+	font-weight: 500;
+}
+.skills .box .percent{
+	position: relative;
+	width: 100%;
+	height: 30%;
+	background: black;
+}
+.skills .box .percent div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #03a9f4;
+}
+.hobbies ul li{
+	list-style: none;
+	lighting-color: #333;
+	font-weight: 500;
+	margin: 10px 0px;
+	color: #212327;
+
+}
+.hobbies ul li .fa{
+	color:red; 
+	font-size: 18px;
+	margin-right: 16px;
+}
+.certificate a{
+	position: relative;
+	color: #212327;
+	text-decoration: none;
+	margin-left: 10px; 
+	display: grid;
+	grid-template-rows: 5 1fr;
+
+}
+.certificate a:hover{
+	color: white;
+	background-color:black;
+	border-radius: 5px;
+	width: 240px; 	
+	opacity: 0.6;
+	transition: 0.5s;
+}
+.certificate .fa{
+	color: red;
+	position: absolute;
+	margin-top: 4px;
+    margin-left: -23px;	
+}
+.sameer{
+	color: orange;
+}
+.sameer:hover{
+	background-color: lightblue;
+	color: black;
+	border-radius: 5px;
+	border:0.5px solid white;
+	cursor: no-drop;
+}
+
+</style>	
+
+</head>
+<body>
+	<div class="container">
+		<div class="left-side">
+			<div class="profiletext">
+				<div class="imgbox">
+					<img src="profile.jpg">
+				</div>
+				<h2>sameer trivedi<br><span>frontend developer</span></h2>
+			</div>
+			<div class="contactinfo">
+				<h3 class="title">Contact-Info</h3>
+				<ul>
+					<li>
+					<span class="icon"><i class="fa fa-phone" aria-hidden="true"></i> </span>
+					
+					<span class="text">+91   761****129	
+					</span>
+					</li>
+
+					<li>
+					<span class="icon"><i class="fa fa-envelope-open" aria-hidden="true"></i></span>
+					
+					<span class="text">sa***ail.com
+					</span>
+					</li>
+
+					<li>
+					<span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+					
+					<a style="text-decoration: none;" href="file:///C:/Users/user/Desktop/WEB%20PROJECTS%20NEW/resumeweb/resume.html#"><span class="text">my website
+					</span></a>
+					</li>
+
+					<li>
+					<span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i>
+					</span>
+					
+					<a style="text-decoration: none;" href="https://www.linkedin.com/in/sameer-trivedi-a349a01b1/"><span class="text">Linkedin	
+					</span></a>
+					</li>
+
+					<li>
+					<span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+					
+					<span class="text">Pendra(CG)
+					</span>
+					</li>
+				</ul>	
+			</div>
+
+			<div class="contactinfo education">
+				<h3 class="title">Education</h3>
+				<ul>
+					<li>
+					<h3 class="brd">10<sup>th</sup></h3>
+					<h5> 2015-2016</h5>
+					<h4>P W M M H School,pendra.</h4>
+					<h5></h5>
+					</li>
+					<hr>
+
+					<li>
+					<h3 class="brd">12<sup>th</sup></h3>
+					<h5> 2017-2018</h5>
+					<h4>G M H S School,pendra.</h4>
+					</li>
+					<hr>
+
+					<li>
+					<h3 class="brd">B E</h3>
+					<h5> 2018-present</h5>
+					<h4>computer science and engineering at B. I. T. Raipur.</h4>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="contactinfo language">
+				<h3 class="title">languages</h3>
+				<ul>
+					<li>
+						<span class="text">English</span>
+						<span class="percent">
+						<div style="width: 52%;">
+						</div>
+						</span>
+					</li>
+					<li>
+						<span class="text">Hindi</span>
+						<span class="percent"><div style="width: 70%;"></div>
+						</span>
+
+					</li>
+					<li>
+						<span class="text">Sanskrit</span>
+						<span class="percent"><div style="width: 74%;"></div>
+						</span>
+					</li>
+				</ul>		
+			</div>
+		</div>
+
+		<div class="right-side">
+			<div class="about"><hr>
+				<h2 class="title2"> Profile</h2>
+				<p>hello...<br>
+			    I am 
+			<b><span class="sameer">
+				<i>Sameer Trivedi</i>
+			</span></b>
+
+			,I live at pendra road.I am studying in BIT Raipur from computer science branch.
+
+
+
+		</p>
+		</div>
+
+		<div class="about"><hr>
+			<h2 class="title2">Experience</h2>
+
+			<div class="box"></div>
+			<h5>Java developer</h5>
+			<h5>Tipco private limited</h5>
+			<h5> 2017-2018</h5>
+
+		<div class="box">
+			<h5>UI Designer</h5>
+			<h5>TCS</h5>
+			<h5> 2018-2020</h5>	
+		</div>
+			
+		<div class="box">
+			<h5>Web developer</h5>
+			<h5>wipro private limited</h5>
+			<h5> 2020-present</h5>	
+		</div>
+	  </div>
+
+
+	  <div class="about skills"><hr>
+	  	<h2 class="title2">My Skills</h2>
+
+	  		<div class="box">
+	  		<h4>Html</h4>
+	  		<div class="percent">
+	  			<div style="width: 85%"></div>
+	  		</div></div>	
+
+	  		<div class="box">
+	  		<h4>Css</h4>
+	  		<div class="percent">
+	  			<div style="width: 70%"></div>
+	  		</div></div>
+
+	  		<div class="box">
+	  		<h4>JavaScript</h4>
+	  		<div class="percent">
+	  			<div style="width: 15%"></div>
+	  		</div></div>
+
+	  		<div class="box">
+	  		<h4>Wordpress</h4>
+	  		<div class="percent">
+	  			<div style="width: 25%"></div>
+	  		</div></div>
+
+	  		<div class="box">
+	  		<h4>Java</h4>
+	  		<div class="percent">
+	  			<div style="width: 35%"></div>
+	  		</div></div>
+
+
+			<div class="box">
+	  		<h4>Wordpad</h4>
+	  		<div class="percent">
+	  			<div style="width: 65%"></div>
+	  		</div>
+	  	  </div>
+	  	</div>
+	  
+
+	  <div class="about hobbies"><hr>
+	  	<h2 class="title2">My Hobbies</h2>
+	  	<ul>
+	  		<li><i class="fa fa-paint-brush" aria-hidden="true"></i>Drawing</li>
+	  		<li><i class="fa fa-gamepad" aria-hidden="true"></i>Gaming</li>
+	  		<li><i class="fa fa-cutlery" aria-hidden="true"></i>Cooking</li>
+	  		<li><i class="fa fa-code" aria-hidden="true"></i>coding</li>
+	  		
+	  	</ul>
+	  </div>
+  <div class="about certificate"><hr>
+	  	<h2 class="title2">My Certificates</h2>
+	  	<ul>
+	  		<a href="TCSion.png"><i class="fa fa-link" aria-hidden="true"></i>TCS ion</a>
+
+	  		<a href="google grow.png"><i class="fa fa-link" aria-hidden="true"></i>google grow</a>
+
+	  		<a href=" Awareness of COVID.pdf "><i class="fa fa-link" aria-hidden="true"></i>COVID awareness</a>
+
+	  		<a href="udmey.png"><i class="fa fa-link" aria-hidden="true"></i>java </a>
+
+	  		<a href="file:///C:/Users/user/Desktop/WEB%20PROJECTS%20NEW/resumeweb/resume.html#"><i class="fa fa-link" aria-hidden="true"></i>Certificate 5</a>
+
+	  		<a href="C:\certificates\google certificate.pdf"><i class="fa fa-link" aria-hidden="true">
+	  		</i>Certificate 6</a>
+	  		
+	  	</ul>
+	  </div>
+	 
+   </div>
+</div>
+
+
+</body>
+</html>
